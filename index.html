@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Imobiliária</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="imagens/logo.png" alt="Logo da marca" class="logo">
+
+            <ul class="navDesktop">
+                <li><a href="#" onclick="voltarInicial()">Inicio</a></li>
+                <li><a href="#" onclick="casasScroll()">Casas</a></li>
+                <li><a href="#" onclick="sobreScroll()">Sobre</a></li>
+                <li><a href="#" onclick="servicosScroll()">Serviços</a></li>
+                <li><a href="#" onclick="contatoScroll()">Contato</a></li>
+            </ul>
+
+            <!-- Mobile -->
+            <div class="navMobile-btn">
+                <div class="rows"></div>
+                <div class="rows"></div>
+                <div class="rows"></div>
+            </div>
+            <ul class="navMobile">
+                <li><a href="#" onclick="voltarInicial()">Inicio</a></li>
+                <li><a href="#" onclick="casasScroll()">Casas</a></li>
+                <li><a href="#" onclick="sobreScroll()">Sobre</a></li>
+                <li><a href="#" onclick="servicosScroll()">Serviços</a></li>
+                <li><a href="#" onclick="contatoScroll()">Contato</a></li>
+                <li><a href=""><i class='bx bxl-instagram-alt'></i></a></li>
+                <li><a href=""><i class='bx bxl-whatsapp'></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="poster-inicial">
+
+            <div class="slides">
+                <input type="radio" name="radio" id="radio1">
+                <input type="radio" name="radio" id="radio2">
+                <input type="radio" name="radio" id="radio3">
+
+                <div class="fotos primeira">
+                    <picture>
+                        <img src="imagens/imagem3.webp" alt="Imagem ilustrativa de casas">
+                    </picture>
+                </div>
+                <div class="fotos">
+                    <picture>
+                        <img src="imagens/imagem2.jpg" alt="Imagem ilustrativa de casas">
+                    </picture>
+                </div>
+                <div class="fotos">
+                    <picture>
+                        <img src="imagens/imagem1.webp" alt="Imagem ilustrativa de casas">
+                    </picture>
+                </div>
+            </div>
+
+            <div class="descricaoPrecosContainer">
+                <div>
+                    <h2 class="titulo-poster">R$ 12.200.34</h2>
+                    <p>4 quartos | 2 carros</p>
+                </div>
+                <div class="arrows">
+                    <div class="arrow1" onclick="navegarCarrossel(1)"><i class='bx bx-chevron-left'></i></div>
+
+                    <div class="arrow2" onclick="navegarCarrossel(2)"><i class='bx bx-chevron-right' ></i></div>
+                </div>
+            </div>
+            
+        </section>
+
+        <section class="casas">
+            <h1>Casas</h1>
+            <div class="casas-navigation">
+                <div class="filtrarArea">
+                    <input type="search" placeholder="Sua casa dos sonhos" name="busca" id="buscar">
+                    <button id="buttonSearch" onclick="pesquisar()">
+                        <i class='bx bx-search' ></i>
+                    </button>
+                </div>
+
+                <div class="filtrarArea">
+                    <input type="button" value="Alphaville" class="botaoFiltro" id="btn1" onclick="filtrar('alphaville')">
+                    <input type="button" value="Balneario" class="botaoFiltro" id="btn2" onclick="filtrar('balneario')">
+                    <input type="button" value="Centro" class="botaoFiltro" id="btn3" onclick="filtrar('centro')">
+                    <input type="button" value="Limpar Filtros" class="botaoFiltro" onclick="filtrar('limpar')">
+                </div>
+            </div>
+            
+            <div class="casas">
+                <div class="item-casas alphaville">
+                    <img src="imagens/imagem1-p.webp" alt="Foto ilustrativa de imóvel">
+                    <h2>Alphaville</h2>
+                    <p>São Paulo - SP</p>
+                    <p>8 quartos | 12 carros</p>
+                    <p class="price">R$ 200.000</p>
+                    <input type="button" value="VER MAIS">
+                </div>
+                <div class="item-casas balneario">
+                    <img src="imagens/imagem2-p.jpg" alt="Foto ilustrativa de imóvel">
+                    <h2>BALNEÁRIO</h2>
+                    <p>São Paulo - SP</p>
+                    <p>8 quartos | 12 carros</p>
+                    <p class="price">R$ 200.000</p>
+                    <input type="button" value="VER MAIS">
+                </div>
+                <div class="item-casas centro">
+                    <img src="imagens/imagem3-p.webp" alt="Foto ilustrativa de imóvel">
+                    <h2>CENTRO</h2>
+                    <p>São Paulo - SP</p>
+                    <p>8 quartos | 12 carros</p>
+                    <p class="price">R$ 200.000</p>
+                    <input type="button" value="VER MAIS">
+                </div>
+
+
+                <div class="item-casas stage2 alphaville">
+                    <img src="imagens/imagem1-p.webp" alt="Foto ilustrativa de imóvel">
+                    <h2>Alphaville</h2>
+                    <p>São Paulo - SP</p>
+                    <p>8 quartos | 12 carros</p>
+                    <p class="price">R$ 200.000</p>
+                    <input type="button" value="VER MAIS">
+                </div>
+                <div class="item-casas stage2 balneario">
+                    <img src="imagens/imagem2-p.jpg" alt="Foto ilustrativa de imóvel">
+                    <h2>BALNEÁRIO</h2>
+                    <p>São Paulo - SP</p>
+                    <p>8 quartos | 12 carros</p>
+                    <p class="price">R$ 200.000</p>
+                    <input type="button" value="VER MAIS">
+                </div>
+                <div class="item-casas stage2 centro">
+                    <img src="imagens/imagem3-p.webp" alt="Foto ilustrativa de imóvel">
+                    <h2>CENTRO</h2>
+                    <p>São Paulo - SP</p>
+                    <p>8 quartos | 12 carros</p>
+                    <p class="price">R$ 200.000</p>
+                    <input type="button" value="VER MAIS">
+                </div>
+            </div>
+
+            <button id="moreButton">
+                Ver mais <i class='bx bx-chevron-down'></i>
+            </button>
+        </section>
+
+        <article class="sobre">
+            <h1>Sobre a IMOB</h1> 
+            <div class="container">
+                <p>Bem-vindo à IMOB, a sua parceira ideal na busca pelo imóvel perfeito! Desde a nossa fundação, temos nos dedicado a transformar o sonho da casa própria em realidade para milhares de clientes. Com uma equipe de profissionais experientes e apaixonados pelo que fazem, a IMOB se destaca no mercado imobiliário pela sua abordagem personalizada e comprometida. Acreditamos que cada cliente é único, e por isso, cuidamos de cada detalhe do processo de compra, venda ou locação com atenção e dedicação.</p>
+                <img src="imagens/imagem2-m.jpg" alt="Foto ilustrativa sobre a empresa" class="floatImage">
+            </div>
+
+            <div class="container container2">
+                <img src="imagens/abordagem.jpg" alt="Foto ilustrativa sobre a empresa" class="floatImage2">
+                <p>Na IMOB, buscamos não apenas proporcionar imóveis, mas proporcionar experiências memoráveis. Nossa missão é facilitar a conexão entre pessoas e lares, oferecendo não apenas uma propriedade, mas um espaço que atenda às suas necessidades e expectativas. Trabalhamos em parceria com nossos clientes, ouvindo suas histórias e ajudando a encontrar a propriedade que se encaixe em sua vida e necessidades.</p>
+            </div>            
+        </article>
+        <!-- End of Sobre -->
+
+        <!-- Serviços -->
+        <section class="servicos">
+            <h1>Nossos Serviços</h1>
+
+            <div class="containerServicos">
+    
+                <div class="conteudoServicos">
+
+                    <div class="slides">
+                        <div class="imagemServicos primeira">
+                            <picture>
+                                <source media="(max-width: 400px)" srcset="imagens/consultoria-p.jpg" type="image/jpeg">
+                                <img src="imagens/consultoria.jpg" alt="Foto ilustrativa de serviço">
+                            </picture>
+                            <div class="descricaoServ">
+                                <h2>Consultoria de imóveis</h2>
+                                <a href="#">Entrar em contato</a>
+                            </div>
+                        </div>
+
+                        <div class="imagemServicos">
+                            <picture>
+                                <source media="(max-width: 400px)" srcset="imagens/avaliação-p.jpg" type="image/jpeg">
+                                <img src="imagens/avaliação.jpg" alt="Foto ilustrativa de serviço">
+                            </picture>
+                        <div class="descricaoServ">
+                            <h2>Avaliação de imóveis</h2>
+                            <a href="#">Entrar em contato</a>
+                        </div>
+                        </div>
+                    
+                        <div class="imagemServicos">
+                            <picture>
+                                <source media="(max-width: 400px)" srcset="imagens/locacao-p.jpg" type="image/jpeg">
+                                <img src="imagens/locacao.jpg" alt="Foto ilustrativa de serviço">
+                            </picture>
+                            <div class="descricaoServ">
+                                <h2>Locação de imóveis</h2>
+                                <a href="#">Entrar em contato</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="setas">
+                        <input type="button" value="<" class="seta1" onclick="mover(1)">
+                        <input type="button" value=">" class="seta2" onclick="mover(2)">
+                    </div>
+                </div>
+                
+                <article>
+                    <h3>Locação de Imóveis</h3>
+                    <p>Encontre o imóvel dos seus sonhos com nosso serviço de locação, que oferece uma vasta seleção de propriedades para atender às suas necessidades e orçamento. Nossa equipe especializada está pronta para ajudar na busca pelo lar perfeito, garantindo um processo rápido e seguro, com total transparência em todas as etapas. Desfrute da comodidade de alugar com quem entende do assunto e valoriza sua satisfação.</p>
+
+                    <h3>Consultoria de Imóveis</h3>
+                    <p>Navegar pelo mercado imobiliário pode ser desafiador, mas com nossa consultoria especializada, você terá acesso a profissionais com profundo conhecimento do setor. Oferecemos orientação personalizada que considera seus objetivos e preferências, ajudando você a tomar decisões informadas em compra, venda ou aluguel de imóveis. Confie em nós para guiar você em cada etapa do processo, desde a pesquisa até a negociação.</p>
+
+                    <h3>Avaliação de Imóveis</h3>
+                    <p>Conheça o verdadeiro valor do seu imóvel com nosso serviço de avaliação, que combina metodologia rigorosa e análise de mercado. Nossos especialistas realizam uma avaliação detalhada, considerando todos os fatores relevantes, para garantir que você obtenha o melhor retorno sobre seu investimento. Seja para venda ou locação, nossa avaliação precisa e confiável ajuda você a definir estratégias competitivas e aumentar suas chances de sucesso no mercado imobiliário.</p>
+                </article>
+            </div>
+        </section>
+        <!-- End of Services -->
+
+        <!-- Contato Area -->
+        <aside>
+            <div class="contato">
+                <h1>Entre em contato conosco!</h1>
+                <h2>Mande a sua mensagem</h2>
+
+                <div class="container-contato">
+                    <div class="items-contato">
+                        <p>Email: imob@gmail.com</p>
+                        <p>Telefone: 75999140212</p>
+                    </div>
+
+                    <div class="vertical-row"></div>
+                    
+                    <form action="https://formsubmit.co/b593cabf3ebe49d806f72c5225fea494" autocomplete="on" method="post">
+                        <div>
+                            <label for="nome">Nome:</label>
+                            <input type="text" name="nome" id="nome">
+                        </div>
+                        <div>
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email">
+                        </div>
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea name="mensagem" id="mensagem" cols="20" rows="10"></textarea>
+
+                        <input type="submit" class="submit" value="Enviar">
+
+                        <input type="hidden" name="_subject" value="Novo Contato">
+                        <input type="hidden" name="_honey" style="display: none;">
+                        <input type="hidden" name="_captcha" value="false">
+                    </form>
+                </div>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d468598.7261603447!2d-46.7379157271137!3d-23.65488051547157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce448183a461d1%3A0x9ba94b08ff335bae!2zU8OjbyBQYXVsbywgU1A!5e0!3m2!1spt-BR!2sbr!4v1728420386117!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="yes" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </aside>
+
+        <!-- Botão de voltar -->
+        <div id="backButton" onclick="voltarInicial()"><i class='bx bx-chevron-up'></i></div>
+    </main>
+    <!-- END OF MAIN -->
+    
+    <!-- FOOTER -->
+    <footer>
+        <div class="footerFlex">
+            <img src="imagens/logo.png" alt="" class="logo">
+
+            <div class="footerLinksContainer">
+                <div class="linksItem">
+                    <h2>Intitucional</h2>
+                    <ul>
+                        <li><a href="#" onclick="voltarInicial()">Inicio</a></li>
+                        <li><a href="#" onclick="casasScroll()">Casas</a></li>
+                        <li><a href="#" onclick="sobreScroll()">Sobre</a></li>
+                        <li><a href="#" onclick="servicosScroll()">Serviços</a></li>
+                        <li><a href="#" onclick="contatoScroll()">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="linksItem">
+                    <h2>Encontre imóveis</h2>
+                    <ul>
+                        <li><a href="">Alugar</a></li>
+                        <li><a href="">Comprar</a></li>
+                        <li><a href="">Lançamentos</a></li>
+                        <li><a href="">Simulador de Financiamento</a></li>
+                    </ul>
+                </div>
+                <div class="linksItem">
+                    <h2>Anunciantes</h2>
+                    <ul>
+                        <li><a href="">Verificar valor de imóvel</a></li>
+                        <li><a href="">Verificar imóveis</a></li>
+                        <li><a href="">Anunciar como proprietário</a></li>
+                    </ul>
+                </div>
+                <div class="linksItem">
+                    <h2></h2>
+                    <ul>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="redes">
+            <ul>
+                <li><a href="#"><i class
+                    ='bx bxl-instagram-alt'></i></a></li>
+                <li><a href="#"><i class='bx bxl-whatsapp'></i></a></li>
+                <li><a href="#"><i class='bx bxl-facebook-circle' ></i></a></li>
+            </ul>
+        </div>
+        <div class="foot">
+            <p>Desenvolvido por <a href="https://upedrodev.netlify.app/" target="_blank" rel="external">&copy;Pedro Nascimento</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
