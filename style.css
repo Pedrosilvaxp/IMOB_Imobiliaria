@@ -199,7 +199,6 @@ section.poster-inicial {
     height: 100%;
     object-fit: cover;
 }
-.slides input[type="radio"] {display: none;}
 .slides div {
     width: 25%;
 }
